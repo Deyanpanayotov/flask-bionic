@@ -1,13 +1,13 @@
 import dash
 from dash import dcc
 import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output
+from dash import html
 from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
 
-from dash.dependencies import Input, Output
-from dash import html
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP] )
 app = dash.Dash(__name__)
