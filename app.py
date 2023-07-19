@@ -1,8 +1,9 @@
 from flask import Flask
+import dash
 app = Flask(__name__)
 @app.route('/')
 
-import dash
+
 from dash import dcc
 import dash_bootstrap_components as dbc
 
