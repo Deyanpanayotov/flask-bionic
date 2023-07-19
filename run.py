@@ -1,12 +1,11 @@
 from flask import Flask, render_template
-from app import server
+from app import app
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def render_dash_app():
-    from app import app as dash_app
-    return render_template('index.html', dash_app=dash_app.layout)
+    return render_template('index.html', dash_app=app.layout)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
